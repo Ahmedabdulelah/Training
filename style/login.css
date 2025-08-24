@@ -11,6 +11,7 @@ body{
     height: 300px;
     padding: 80px 40px;
     background: rgba(55, 122, 102, 0.6);
+    border-radius: 20px;
 }
 .login h2{
     margin: 0;
