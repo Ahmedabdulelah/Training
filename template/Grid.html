@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Grid in Css</title>
+    <style>
+        .wrapper-1{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap:1em ;
+            row-gap: 1em; 
+            grid-auto-rows: 100px;
+            grid-auto-rows: minmax(100px,auto);
+        }
+        .wrapper-1 > div {
+            border: 1px #ccc solid;
+            padding: 15px;
+        }
+        .wrapper-1 > div:nth-child(odd){
+            background: #ccc;
+        }
+        .wrapper-2{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap:1em ;
+            row-gap: 1em; 
+            grid-auto-rows: 100px;
+            grid-auto-rows: minmax(100px,auto);
+            /* align-items: start; */
+            /* justify-items: end; */
+        }
+        .wrapper-2 > div {
+            border: 1px #5e5e5e solid;
+            padding: 15px;
+        }
+        .wrapper-2 > div:nth-child(odd){
+            background: #865ee2;
+        }
+        .box-1{
+            grid-column: start;
+        }
+        .box-2{
+            justify-self: end;
+        }
+        .box-3{
+            align-self: center;
+        }
+        .box-4{
+            justify-self: start;
+        }
+        
+    </style>
+</head>
+<body>
+        <div class="wrapper-1">
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, nesciunt?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim vero in sunt quidem
+            </div>
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, nesciunt?</div>
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, nesciunt?</div>
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, nesciunt?</div>
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, nesciunt?</div>
+        </div>
+        <hr style="margin-top: 20px;">
+
+        <div class="wrapper-2">
+            <div class="box-1">box 1</div>
+            <div class="box-2">box 2</div>
+            <div class="box-3">box 3</div>
+            <div class="box-4">box 4</div>
+        </div>
+</body>
+</html>
